@@ -3,6 +3,7 @@ msg1: 	.asciiz "Digite um valor: "
 
 sim:		.asciiz "Sim"
 nao:		.asciiz "Nao"
+
 .text
 .globl main
 main:
@@ -30,7 +31,7 @@ main:
 		j fim_if_res
 	else_res:
 		li $v0, 4
-		la $a0, nao
+		la $a0, sim
 		syscall
 		
 	fim_if_res:
@@ -42,7 +43,7 @@ main:
 .text
 ver_quadrado_perfeito:
 	# v0 == 1 ? sim : nao
-	li $t0, 0 # t0 = i
+	li $t0, 1 # t0 = i
 	
 	loop:
 		mul $t1, $t0, $t0	 # t1 = i * i
@@ -52,14 +53,15 @@ ver_quadrado_perfeito:
 		addi $t0, $t0, 1		# i++
 		j loop
 	fim_loop:
-		if:
-			mul $t1, $t0, $t0	# t1 = i * i
+			
+		if:	
+			mul $t1, $t0, $t0 # t1 = i * i
 			bne $t1, $a0, else
 		then:
 			li $v0, 1 # sim
 			j fim_if
 		else:
-			li $v0, 0 # sim		
+			li $v0, 0 # nao
 		fim_if:
 			jr $ra
 		
