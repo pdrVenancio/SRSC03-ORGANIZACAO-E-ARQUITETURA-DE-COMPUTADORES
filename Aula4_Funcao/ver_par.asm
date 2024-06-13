@@ -1,7 +1,7 @@
 .data
 msg1: 	.asciiz "Digite um valor: "
 
-par:		.asciiz "Par"
+par:	.asciiz "Par"
 impar:	.asciiz "impar"
 .text
 .globl main
@@ -42,8 +42,8 @@ main:
 .text
 ver_par:
 	# tem que ver esse bo aqui
-	andi $v0, $a0, 1
-	 jr $ra 
+	andi $v0, $a0, 1 # pega o ultimo bit do numero 
+	jr $ra 
 	
 	
 	
