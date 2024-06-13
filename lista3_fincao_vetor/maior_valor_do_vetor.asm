@@ -1,5 +1,5 @@
 .data
-
+# declarar o vetor com elemento 0 e depois ir alterando cada elemento quando for lido
 .text
 .globl main
 main:
