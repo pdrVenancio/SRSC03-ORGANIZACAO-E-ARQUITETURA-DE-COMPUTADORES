@@ -46,7 +46,7 @@ ver_quadrado_perfeito:
 	li $t0, 1 # t0 = i
 	
 	loop:
-		mul $t1, $t0, $t0	 # t1 = i * i
+		mul $t1, $t0, $t0	# t1 = i * i
 		slt $t2, $t1, $a0	# t1 < n (a0) ? t2 = 1 : t2 = 0  
 		beq $t2, $zero, fim_loop
 		
