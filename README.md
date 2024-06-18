@@ -23,7 +23,7 @@ arrA .word 1,2,3,4,5,6
 arrB .word 2 : 10 #10 elementos inteiros ocupados pelo valor 2
 ```
 
-Para percorrer o vetor
+Para percorrer o vetor, sll desloca os bit para a esqueda. 
 
 ```
 sll rd, rt, shamt
