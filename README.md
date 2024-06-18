@@ -38,5 +38,5 @@ sll rd, rt, shamt
 Ussamos **jal** e **jr** o registrador **ra**. 
 
 * Registradore de argumento **a0** a **a3**, se precisar de mais podemos usar os registradores **t** antes de **jal**.
-* Pode retornar no maximo 2 valores **v0** e **v1** ante de chamar o **jr**.
+* Pode retornar no maximo 2 valores **v0** e **v1** ante de chamar o **jr $ra**.
 *
