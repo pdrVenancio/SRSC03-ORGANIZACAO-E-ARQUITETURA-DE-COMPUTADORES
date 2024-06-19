@@ -23,7 +23,7 @@ arrA .word 1,2,3,4,5,6
 arrB .word 2 : 10 #10 elementos inteiros ocupados pelo valor 2
 ```
 
-Para percorrer o vetor
+Para percorrer o vetor, sll desloca os bit para a esqueda. 
 
 ```
 sll rd, rt, shamt
@@ -38,5 +38,5 @@ sll rd, rt, shamt
 Ussamos **jal** e **jr** o registrador **ra**. 
 
 * Registradore de argumento **a0** a **a3**, se precisar de mais podemos usar os registradores **t** antes de **jal**.
-* Pode retornar no maximo 2 valores **v0** e **v1** ante de chamar o **jr**.
+* Pode retornar no maximo 2 valores **v0** e **v1** ante de chamar o **jr $ra**.
 *
