@@ -14,10 +14,10 @@ main:
 	li $s0, 0 # soma = 0
 	li $s1, 0 # i = 0
 	
-	#endereço de cada posição = base + deslocamennto
-	# posição 0 
+	#endereco de cada posicao = base + deslocamennto
+	# posicao 0 
 	
-	la $t0, vet #endereço base, onde começa o vetor
+	la $t0, vet #endereco base, onde comeca o vetor
 	
 	# deslocamento para o indice 0: 
 	#deslocar 1 casa multiplica 2, deslocar 2 casa multiplica por 4
