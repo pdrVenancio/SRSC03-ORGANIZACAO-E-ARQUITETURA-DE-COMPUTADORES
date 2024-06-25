@@ -1,7 +1,7 @@
 .data
 
-vetA:	.word
-vetB:	.word
+vetA:	.word 0 : 4
+vetB:	.word 0 : 6
 
 .text
 .globl main
@@ -72,9 +72,7 @@ main:
 # a1 == vetB
 # v0 == cont
 com_vet:
-	li $v0, 0 # con
-	
-	li $t1, 0
+	li $v0, 0 # cont
 	
 	# limite dos vetores & encremento
 	li $s0, 0 # i
@@ -92,6 +90,9 @@ com_vet:
 		add $s4, $a0, $t0
 		# armazeno o valor de A
 		lw $t6, 0($s4)
+		
+		# reset idx do vetB
+		li $s3, 0 # j
 
 		# t6 = valor de A
 		percorre_B:
@@ -112,10 +113,6 @@ com_vet:
 			addi $s3, $s3, 1
 			j percorre_B
 		end_percorre_B:
-		
-		# reset idx do vetB
-		li $s3, 0 # j
-		
 		addi $s0, $s0, 1
 		j percorre_A
 	end_percorre_A:

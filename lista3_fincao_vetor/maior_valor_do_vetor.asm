@@ -3,7 +3,7 @@ vet:	.word
 .text
 .globl main
 main:
-	la $t0, vet # t0 onde começa o vetor
+	#la $t0, vet # t0 onde comeÃ§a o vetor
 
 	jal get_values
 	
@@ -20,9 +20,9 @@ main:
 .data
 .text
 get_values:
-
-	li $s0, 1 # i = 0
-	li $s1, 7 # n = 7
+	la $t0, vet
+	li $s0, 0 # i = 0
+	li $s1, 6 # n = 7
 	
 	loop_get_values:
 		beq $s0, $s1, end_loop_get_values
@@ -52,7 +52,7 @@ get_values:
 get_maior:
 	# v0 = maior valor
 	# t5 = maior valor temporario
-	li $s0, 1 # i = 0
+	li $s0, 0 # i = 0
 	
 	sll $t1, $s0, 2
 		
@@ -81,5 +81,6 @@ get_maior:
 		
 		not_change:
 		addi $s0, $s0, 1
+		j loop
 	end_loop:
 		jr $ra
