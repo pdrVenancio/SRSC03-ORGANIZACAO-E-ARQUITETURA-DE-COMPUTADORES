@@ -1,42 +1,40 @@
-# Inicializar no linux
+# Aulas de Organização e Arquitetura de Computadores
 
-java -jar nome do arquivo
+Este repositório contém o material desenvolvido nas **Aulas de Organização e Arquitetura de Computadores**, onde exploramos os conceitos fundamentais de hardware e arquitetura através da programação em **Assembly**. O objetivo principal é compreender o funcionamento interno dos computadores e a relação entre software e hardware.
 
-**slt :**  < true retorna 1 false retorna 0
+## 📚 Conteúdo
 
-**exemplo:**
+- **Introdução à Arquitetura de Computadores**
+  - Conceitos básicos de arquitetura
+  - Estrutura de um processador e ciclo de instrução
+- **Programação em Assembly**
+  - Sintaxe básica e instruções
+  - Registros, memória e endereçamento
+  - Operações aritméticas e lógicas
+- **Estruturas de Controle**
+  - Laços e condições
+  - Sub-rotinas e chamadas de função
+- **Manipulação de Dados**
+  - Operações com strings e arrays
+  - Manipulação de números binários e inteiros
+- **Interação com o Hardware**
+  - Entrada e saída (I/O)
+  - Interrupções e acesso direto à memória (DMA)
+- **Otimização de Código**
+  - Técnicas para escrita de código eficiente em Assembly
+  - Comparação com linguagens de alto nível
 
-```
-slt $t1, $zero, $v0  # if($zero < $v0): $t1 = 1 else: $t1 = 0
-```
+## 🛠 Tecnologias Utilizadas
 
-**li:**  Carega um valor, normalmente quando vamor pedir dados do usuario
+- **Linguagem de Programação:** Assembly (x86 e x86-64)
+- **Montador:** NASM (Netwide Assembler) ou MASM
+- **Ambiente de Execução:** Emuladores como **DOSBox** ou **QEMU**, e plataformas nativas Linux ou Windows
 
-# Array
+## 📂 Estrutura do Repositório
+- Códigos desenvolvidos em aula
+- Exercios para praticar o conteudo
 
-Declarar como label
+1. **Clone o repositório:**
 
-```
-.data
-
-arrA .word 1,2,3,4,5,6
-arrB .word 2 : 10 #10 elementos inteiros ocupados pelo valor 2
-```
-
-Para percorrer o vetor, sll desloca os bit para a esqueda. 
-
-```
-sll rd, rt, shamt
-```
-
-* **rd:**  Registrador onde o resultado sera armazenado.
-* **rt:** Registrador que contem o operando (idx).
-* **shmt:**  quantidade de bits a serem deslocados  (4 * i).
-
-# Função
-
-Ussamos **jal** e **jr** o registrador **ra**. 
-
-* Registradore de argumento **a0** a **a3**, se precisar de mais podemos usar os registradores **t** antes de **jal**.
-* Pode retornar no maximo 2 valores **v0** e **v1** ante de chamar o **jr $ra**.
-*
+   ```bash
+   git clone https://github.com/pdrVenancio/SRSC03-ORGANIZACAO-E-ARQUITETURA-DE-COMPUTADORES.git
